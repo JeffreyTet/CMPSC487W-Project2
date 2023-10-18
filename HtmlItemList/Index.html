@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Candy Store</title>
+    <link rel="stylesheet" href="StyleSheetIndex.css" type="text/css">
+
+    <h1 class="head1">JawBreak Candy Store</h1>
+    
+</head>
+<body>
+    <form action="/search" method="post">
+        <label for="Search"> Search: </label>
+        <input class="textbox1" type="text" id="SearchVal" required>
+        <button type="submit" id="SearchButton">Search</button><br />
+
+    </form>
+    <form action="/filter" method="post">
+        <button type="submit" id="FilterID">ID-Sort</button>
+        <button type="submit" id="FilterName">Name-Sort</button>
+    </form>
+
+    <div id="directoryTable"></div>
+
+    <script src="DatabaseCode.js"></script>
+    <table>
+        <tr>
+            <th>Candy ID</th>
+            <th>Candy Name</th>
+            <th>Candy Description</th>
+            <th>Candy Image</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>M&M</td>
+            <td>Bite size Chocolate Pieces.</td>
+            <td><img src="C:\Users\Jeff\Cmpsc487WScreenShots\CandyItemImages\M&M.jpg" alt="Image Description"></td>
+            <td>
+                <a href="{%url 'edit_Candy' item.itemID%}" class="btn btn-secondary btn-sm">Edit</a>
+                <form method="post" action="{%url 'index'%}" style="display:inline;">
+             
+                    <input type="hidden" name="delete_id" value="{{item.itemID}}" /><br />
+                    <input type="submit" value="Delete" class="btn btn-danger btn-sm" onclick=" return confirm('Are you sure you want to delete.')" />
+
+                </form>
+
+
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Skittle'</td>
+            <td>Taste the rainbow</td>
+            <td><img src="C:\Users\Jeff\Cmpsc487WScreenShots\CandyItemImages\Skittles.jpg" alt="Image Description"></td>
+            <td>
+                <a href="{%url 'edit_Candy' item.itemID%}" class="btn btn-secondary btn-sm">Edit</a>
+                <form method="post" action="{%url 'index'%}" style="display:inline;">
+                  
+                    <input type="hidden" name="delete_id" value="{{item.itemID}}" /><br />
+                    <input type="submit" value="Delete" class="btn btn-danger btn-sm" onclick=" return confirm('Are you sure you want to delete.')" />
+
+                </form>
+
+
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Milky Way</td>
+            <td>Carmel and Chocolate bar</td>
+            <td><img src="C:\Users\Jeff\Cmpsc487WScreenShots\CandyItemImages\MilkyWay.png" alt="Image Description"></td>
+            <td>
+                <a href="{%url 'edit_Candy' item.itemID%}" class="btn btn-secondary btn-sm">Edit</a>
+                <form method="post" action="{%url 'index'%}" style="display:inline;">
+                  
+                    <input type="hidden" name="delete_id" value="{{item.itemID}}" /><br />
+                    <input type="submit" value="Delete" class="btn btn-danger btn-sm" onclick=" return confirm('Are you sure you want to delete.')" />
+
+                </form>
+
+
+            </td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Sour Patch Kids</td>
+            <td>Sour then Sweet</td>
+            <td><img src="C:\Users\Jeff\Cmpsc487WScreenShots\CandyItemImages\SourKids.jpg" alt="Image Description"></td>
+            <td>
+                <a href="{%url 'edit_Candy' item.itemID%}" class="btn btn-secondary btn-sm">Edit</a>
+                <form method="post" action="{%url 'index'%}" style="display:inline;">
+                   
+                    <input type="hidden" name="delete_id" value="{{item.itemID}}" /><br />
+                    <input type="submit" value="Delete" class="btn btn-danger btn-sm" onclick=" return confirm('Are you sure you want to delete.')" />
+
+                </form>
+
+
+            </td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Twin Snakes</td>
+            <td>Gummy Snakes</td>
+            <td><img src="C:\Users\Jeff\Cmpsc487WScreenShots\CandyItemImages\TwinSnakes.jpg" alt="Image Description"></td>
+            <td>
+                <a href="{%url 'edit_Candy' item.itemID%}" class="btn btn-secondary btn-sm">Edit</a>
+                <form method="post" action="{%url 'index'%}" style="display:inline;">
+                    
+                    <input type="hidden" name="delete_id" value="{{item.itemID}}" /><br />
+                    <input type="submit" value="Delete" class="btn btn-danger btn-sm" onclick=" return confirm('Are you sure you want to delete.')" />
+
+                </form>
+
+
+            </td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Hershey Chocolate Bar</td>
+            <td>Chocolate as a bar</td>
+            <td><img src="C:\Users\Jeff\Cmpsc487WScreenShots\CandyItemImages\HersheyChoc.jpg" alt="Image Description"></td>
+            <td>
+                <a href="{%url 'edit_Candy' item.itemID%}" class="btn btn-secondary btn-sm">Edit</a>
+                <form method="post" action="{%url 'index'%}" style="display:inline;">
+                   
+                    <input type="hidden" name="delete_id" value="{{item.itemID}}" /><br />
+                    <input type="submit" value="Delete" class="btn btn-danger btn-sm" onclick=" return confirm('Are you sure you want to delete.')" />
+
+                </form>
+
+
+            </td>
+        </tr>
+
+    </table>
+
+
+    <h2 class="head2">Add Candy to List</h2>
+
+    <form action="#index" method="post">
+        <label for="CandyID" style="color:ghostwhite">ID of Candy:</label>
+        <input class="textbox1" type="text" id="ItemID" name="CandyID" required><br>
+
+        <label for="Candyname" style="color:ghostwhite">Name of Candy:</label>
+        <input class="textbox1" type="text" id="Itemname" name="Candyname" required><br>
+
+        <label for="CandyDescription" style="color:ghostwhite">CandyDescription:</label>
+        <input class="textbox2" type="text" id="ItemDiscription" name="CandyDescription" required><br>
+
+        <label for="CandyImage" style="color:ghostwhite">CandyImage: </label>
+        <div class="form-group">
+            <input type="file" class="form-control-file" id="{{form.image.id_for_label}}" name="{{form.image.name}}">
+        </div><br>
+        <button type="submit" id="CandyButton">Submit Candy</button>
+    </form>
+
+
+
+</body>
+</html>

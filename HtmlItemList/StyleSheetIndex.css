@@ -1,0 +1,43 @@
+﻿body
+{
+    background-color:steelblue;
+    font-family:sans-serif;
+}
+
+.head1 {
+    text-align:center;
+    height: 50px;
+    margin: 10px auto;
+    color: black;
+    background-color: lightgrey;
+}
+.head2 {
+    text-align: center;
+    width:300;
+    height: 25px;
+    margin: 10px auto;
+    color: black;
+    background-color: lightgrey;
+}
+.textbox1 {
+    width: 500px;
+    margin: 10px;
+
+}
+.textbox2{
+    height:150px;
+    width: 500px;
+    margin: 10px;
+
+}
+table,tr,th,td,caption{
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    padding: 0.5rem;
+    width: 1000px;
+    color: whitesmoke;
+
+
+}
+
+
