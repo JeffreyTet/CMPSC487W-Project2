@@ -1,0 +1,17 @@
+create table StoreItems(
+itemID int not null,
+itemName varchar (50) not null,
+itemDescript varchar(2500) not null,
+itemImage varchar (5000),
+primary key (itemID)
+);
+
+insert into StoreItems values
+(1, 'M&M', 'Bite size Chocolate Pieces.', 'C:\Users\Jeff\Cmpsc487WScreenShots\CandyItemImages\M&M.jpg'),
+(2, 'Skittles' , 'Taste the rainbow','C:\Users\Jeff\Cmpsc487WScreenShots\CandyItemImages\Skittles.jpg'),
+(3, 'Milky Way' , 'Carmel and Chocolate bar', 'C:\Users\Jeff\Cmpsc487WScreenShots\CandyItemImages\MilkyWay.png' ),
+(4, 'Sour Patch Kids', 'Sour then Sweet','C:\Users\Jeff\Cmpsc487WScreenShots\CandyItemImages\SourKids.jpg'),
+(5, 'Twin Snakes', 'Gummy Snakes','C:\Users\Jeff\Cmpsc487WScreenShots\CandyItemImages\TwinSnakes.jpg' ),
+(6, 'Hershey Chocolate Bar', 'Chocolate as a bar','C:\Users\Jeff\Cmpsc487WScreenShots\CandyItemImages\HersheyChoc.jpg' );
+
+select * from StoreItems
